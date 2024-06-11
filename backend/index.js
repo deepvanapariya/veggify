@@ -17,7 +17,7 @@ app.use("/api", itemRoute)
 
 async function main() {
     // await mongoose.connect(`mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@veggify-recipe.nseka5i.mongodb.net/?retryWrites=true&w=majority&appName=veggify-recipe`)
-    await mongoose.connect(`mongodb://localhost:27017/veggify-recipe`)
+    await mongoose.connect(`mongodb://127.0.0.1:27017/veggify-recipe`)
 }
 
 main()

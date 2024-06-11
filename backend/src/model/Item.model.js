@@ -62,12 +62,13 @@ const ItemSchema = new Schema({
         type: String,
         required: true
     },
-    Instructions: {
+    instructions: {
         type: String,
         required: true
     },
-    tags: [String],
-
+    tags: {
+        type: [String]
+    },
     ingredients: {
         type: [IngredientSchema],
         required: true
