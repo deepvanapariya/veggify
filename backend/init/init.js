@@ -2,6 +2,7 @@ const dotenv = require("dotenv")
 dotenv.config({ path: '../.env' }); //to get var from root dir
 const mongoose = require("mongoose");
 const Item = require("../src/model/Item.model");
+const Category = require("../src/model/Category.model")
 
 const DB_USERNAME = process.env.DB_USERNAME
 const DB_PASSWORD = process.env.DB_PASSWORD
@@ -712,8 +713,16 @@ const data = [
 
 
 const initDB = async () => {
-    await Item.deleteMany({})
+    await Item.deleteMany({});
+    await Category.insertMany([{
+        name: "Entrees",
+        menuId: 1
+    }, {
+        name: "Entrees",
+        menuId: 2
+    }])
     return await Item.insertMany(data);
+
 
 }
 

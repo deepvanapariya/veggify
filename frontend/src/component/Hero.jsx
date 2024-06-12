@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="px-5 xl:px-10 md:w-1/2 md-10 ">
       <h1 className="mt-6 mb-10 text-5xl xl:text-6xl text-center font-bold text-[#2A3342] leading-normal xl:leading-relaxed">
-        A blog templete mad for food{" "}
+        A blog templete made for food{" "}
         <span className="text-orange-400">influencers</span>
       </h1>
       <form

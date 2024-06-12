@@ -1,7 +1,8 @@
 const Item = require("../model/Item.model")
 
 const getAllItems = async (req, res) => {
-    const result = await Item.find({}).sort({ createdAt: -1 })
+    const result = await Item.find({})
+        .sort({ menuId: 1 })
     res.status(200).json(result)
 }
 
@@ -28,9 +29,8 @@ const getSingleItem = async (req, res) => {
         res.status(404).json({ message: "No Item found" })
 
     }
-
-
 }
+
 module.exports = {
     getAllItems, getSerarchItems, getSingleItem
 }
