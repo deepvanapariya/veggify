@@ -2,6 +2,9 @@ import React from "react";
 import Hero from "../../component/Hero";
 import CategoryWrapper from "../category/CategoryWrapper";
 import FeaturedSection from "./FeaturedSection";
+import LatestRecipe from "./LatestRecipe";
+import NewsLetter from "./NewsLetter";
+import AboutSection from "./AboutSection";
 
 function Home() {
   return (
@@ -12,6 +15,9 @@ function Home() {
       </div>
       {/* others component*/}
       <FeaturedSection />
+      <LatestRecipe />
+      <NewsLetter />
+      <AboutSection />
     </div>
   );
 }
