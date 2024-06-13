@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CategoryWrapper from "./CategoryWrapper";
 import axios from "axios";
+import Card from "../../component/Card";
 
 const CategoryPage = () => {
   const { category } = useParams();
@@ -16,7 +17,6 @@ const CategoryPage = () => {
         const response = await axios.get(
           `http://localhost:8000/api/categories/${category}`
         );
-        console.log("fe response=>", response.data);
         setItems(response.data);
       } catch (error) {
         setError(error.message || `Error loading category`);
@@ -35,8 +35,8 @@ const CategoryPage = () => {
       </h1>
       <CategoryWrapper />
 
-      <ul>
-        {items && items.map((item) => <li key={item._id}>{item.name}</li>)}
+      <ul className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl: grid-cols-4 gap-8">
+        {items && items.map((item) => <Card item={item} key={item._id} />)}
       </ul>
     </div>
   );

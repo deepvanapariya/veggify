@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Card from "../component/Card";
 
 const Search = () => {
   const searchText = useParams();
@@ -59,8 +60,10 @@ const Search = () => {
           required
         />
       </div>
-      <ul>
-        {result && result.map((item) => <li key={item._id}>{item.name}</li>)}
+      {loading && <div>Loading...</div>}
+      {error && <div>Unknon error</div>}
+      <ul className=" mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl: grid-cols-4 gap-8">
+        {result && result.map((item) => <Card item={item} key={item._id} />)}
       </ul>
     </div>
   );

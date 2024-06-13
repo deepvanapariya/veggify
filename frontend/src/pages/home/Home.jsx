@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../../component/Hero";
 import CategoryWrapper from "../category/CategoryWrapper";
+import FeaturedSection from "./FeaturedSection";
 
 function Home() {
   return (
@@ -9,6 +10,8 @@ function Home() {
         <Hero />
         <CategoryWrapper />
       </div>
+      {/* others component*/}
+      <FeaturedSection />
     </div>
   );
 }
