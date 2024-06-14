@@ -5,6 +5,8 @@ import FeaturedSection from "./FeaturedSection";
 import LatestRecipe from "./LatestRecipe";
 import NewsLetter from "./NewsLetter";
 import AboutSection from "./AboutSection";
+import CompanyLogo from "./CompanyLogo";
+import Subscription from "./Subscription";
 
 function Home() {
   return (
@@ -18,6 +20,8 @@ function Home() {
       <LatestRecipe />
       <NewsLetter />
       <AboutSection />
+      <CompanyLogo />
+      <Subscription />
     </div>
   );
 }
