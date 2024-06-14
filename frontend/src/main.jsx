@@ -9,6 +9,9 @@ import CategoryPage from "./pages/category/CategoryPage.jsx";
 import Search from "./pages/Search.jsx";
 import SingleProduct from "./pages/product/SingleProduct.jsx";
 import Recipes from "./pages/product/Recipes.jsx";
+import Resources from "./pages/resources/Resources.jsx";
+import About from "./pages/about/About.jsx";
+import Contact from "./pages/contact/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,18 @@ const router = createBrowserRouter([
       {
         path: "/recipes",
         element: <Recipes />,
+      },
+      {
+        path: "/resources",
+        element: <Resources />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
